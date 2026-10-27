@@ -1,11 +1,10 @@
-repeated_numbers = [1,2,2,10,11,13,2,8,9,16,26,50,51,56,89,150,2,3,6,7,67,98]
+from flask import Flask
 
-# for num in repeated_numbers:
-#     print(num)
-result = repeated_numbers.count(2)
+app = Flask(__name__)
 
-print(result)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 
-result = repeated_numbers.index(13)
-print("index 13: ")
-print(result)
+if __name__ == "__main__":
+    app.run(debug=True)
