@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from views.web.routes import web
 from flask import g
 import sqlite3
-#9262134445:AAFRooeIoMHSGmAzQLr49qIHri7484PVmME
+
 DATABASE = '/instance/users.db'
 
 def get_db():
