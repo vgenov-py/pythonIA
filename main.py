@@ -2,6 +2,9 @@ from flask import Flask, render_template
 from views.web.routes import web
 from flask import g
 import sqlite3
+import os
+from threading import Thread
+from telegram_receiver import recibir_mensajes
 
 DATABASE = '/instance/users.db'
 
@@ -22,4 +25,12 @@ def close_connection(exception):
 app.register_blueprint(web)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Comprueba la configuración antes de arrancar.
+
+    Thread(
+        target=recibir_mensajes,
+        args=(app,),
+        daemon=True,
+    ).start()
+
+    app.run(debug=True, use_reloader=False)
