@@ -26,12 +26,12 @@
    - Mostrar el historial en una tabla HTML debajo del formulario.
 
 8. **Guardar conversaciones completas**
-Ahora el historial debe incluir tanto los mensajes recibidos como las respuestas enviadas.
+- Ahora el historial debe incluir tanto los mensajes recibidos como las respuestas enviadas.
 - Registrar el ID del chat, el texto, la fecha y la dirección: entrante o saliente.
 - Indicar quién genera cada mensaje: usuario o IA
 
-9. Añadir memoria a la IA
-Hacer que la IA pueda mantener una conversación de varios turnos.
+9. **Añadir memoria a la IA**
+- Hacer que la IA pueda mantener una conversación de varios turnos.
 - Recuperar los últimos mensajes de ese chat antes de consultar a la IA.
 - Enviarlos como contexto, respetando el orden cronológico y el rol de cada participante.
 - Limitar el contexto a los últimos diez mensajes.
